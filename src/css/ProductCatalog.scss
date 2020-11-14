@@ -1,0 +1,155 @@
+.product-catalog{
+  display: flex;
+
+  .categories-menu{
+    width: 400px;
+    height: calc(100vh - 50px);
+    background-color: #F0F0F0;
+    overflow: auto;
+    transition: width 0.5s;
+
+    &.no-content{
+      width: 100%;
+    }
+
+    .dimmable{
+      height: 100%;
+    }
+
+    p {
+      text-indent: 10px;
+    }
+
+    .ui.divider{
+      margin: 0px;
+    }
+
+    .ui.accordion{
+      text-align: left;
+      margin: 0px 0px 10px 10px;
+
+      .title{
+        font-size: large;
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        border-bottom: 1px solid #D5D8DC;
+
+        &:hover{
+          color: cornflowerblue;
+          cursor: pointer;
+        }
+      }
+    }    
+
+    .categories-item{
+      padding: 0px 10px;
+      h4{
+        margin: 5px;
+      }
+      &:hover{
+        color: cornflowerblue;
+        cursor: pointer;
+      }
+    }    
+
+    .categories-menu-header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2{
+        padding: 10px;
+        margin: 0px;;
+      }
+    }
+  }
+
+   .product-list{
+    padding: 20px;
+    height: calc(100vh - 50px);
+    overflow: auto;
+    width: calc(100% - 400px);
+
+    .headline{
+      display: flex;
+      justify-content: space-between;
+
+      h1{
+        margin: 0;
+      }
+    }
+  }
+
+  .product-table-wrapper{
+    height: 75vh;
+    overflow: auto;
+    width: 100%;
+    margin-top: 20px;
+    border-bottom: 1px solid #D5D8DC;
+
+    .btn-group{
+      display: flex;
+
+      .ui.icon{
+        margin: 0px;
+      }
+
+      input{
+        width: 70px;
+        text-align: center;
+      }
+
+      div{
+        display: flex;
+      }
+      
+    }
+
+    table{
+      border-collapse: collapse;
+      width: 100%;
+
+      th{
+        font-size: large;
+        border-bottom: 1px solid #D5D8DC;
+        position: sticky;
+        top: 0px;
+        background-color: #F0F0F0;
+        z-index: 1;
+        padding: 10px 20px;
+        border-bottom: 1px solid #D5D8DC;
+      }
+
+      td{
+        padding: 10px 20px;
+        border-bottom: 1px solid #D5D8DC;
+
+        &.item-price{
+          width: 200px;
+          text-align: right;
+        }
+
+        &:last-child{
+          white-space: nowrap;
+          width: 200px;
+        }
+
+        &:not(:last-child){
+          border-right: 1px solid #D5D8DC;
+        }
+      }
+    }
+  }
+
+  .no-selected-product{
+    display: grid;
+    text-align: center;
+    align-items: center;
+    width: calc(100% - 400px);
+  }
+
+  &.ui.segment{
+    height: 600px;
+  }
+}
